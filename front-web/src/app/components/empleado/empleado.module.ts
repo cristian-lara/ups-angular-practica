@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FormularioEmpleadoComponent } from './formulario-empleado/formulario-empleado.component';
 import { ListaEmpleadoComponent } from './lista-empleado/lista-empleado.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -16,7 +17,8 @@ import { ListaEmpleadoComponent } from './lista-empleado/lista-empleado.componen
         EmpleadoComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+      FormsModule
     ]
 })
 export class EmpleadoModule { }

@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Cargo</th>
+    <th>Departamento</th>
+    <th>Sueldo</th>
+    <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let empleado of empleados">
+    <td>{{ empleado.nombre }}</td>
+    <td>{{ empleado.cargo }}</td>
+    <td>{{ empleado.departamento }}</td>
+    <td>{{ empleado.sueldo }}</td>
+    <td>
+      <button class="btn btn-primary btn-sm" (click)="editarEmpleado(empleado)">Editar</button>
+      <button class="btn btn-danger btn-sm" (click)="eliminarEmpleado(empleado)">Eliminar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

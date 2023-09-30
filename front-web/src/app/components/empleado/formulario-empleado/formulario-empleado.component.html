@@ -1,0 +1,23 @@
+<form>
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" class="form-control" id="nombre" [(ngModel)]="empleado.nombre" name="nombre" required>
+  </div>
+
+  <div class="form-group">
+    <label for="cargo">Cargo:</label>
+    <input type="text" class="form-control" id="cargo" [(ngModel)]="empleado.cargo" name="cargo" required>
+  </div>
+
+  <div class="form-group">
+    <label for="departamento">Departamento:</label>
+    <input type="text" class="form-control" id="departamento" [(ngModel)]="empleado.departamento" name="departamento" required>
+  </div>
+
+  <div class="form-group">
+    <label for="sueldo">Sueldo:</label>
+    <input type="number" class="form-control" id="sueldo" [(ngModel)]="empleado.sueldo" name="sueldo" required>
+  </div>
+
+  <button style="width: 100%;" type="submit" class="btn btn-primary btn-sm btn-block mt-2" (click)="guardarEmpleado()">Guardar</button>
+</form>
