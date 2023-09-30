@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {IEmpleado} from "../../../models/empleado";
 
 @Component({
@@ -8,12 +8,16 @@ import {IEmpleado} from "../../../models/empleado";
 })
 export class ListaEmpleadoComponent {
   @Input() empleados: IEmpleado[] = [];
+  @Output() empleadoSeleccionado = new EventEmitter<IEmpleado>();
+  @Output() empleadoSeleccionadoEliminar = new EventEmitter<string>();
 
   editarEmpleado(empleado: IEmpleado) {
     console.log('Editar empleado:', empleado);
+    this.empleadoSeleccionado.emit(empleado);
   }
 
   eliminarEmpleado(empleado: IEmpleado) {
     console.log('Eliminar empleado:', empleado);
+    this.empleadoSeleccionadoEliminar.emit(empleado._id);
   }
 }

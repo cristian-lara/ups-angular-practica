@@ -18,13 +18,8 @@ export class EmpleadoService {
 
   // Método para crear un nuevo empleado
   crearEmpleado(empleado: IEmpleado): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      }),
-    };
-
-    return this.http.post<IEmpleado>(`${this.baseUrl}/api/empleados`, empleado, httpOptions);
+    console.log('crear empleado', empleado)
+    return this.http.post<IEmpleado>(`${this.baseUrl}/api/empleados`, empleado);
   }
 
   // Método para obtener un empleado por su ID

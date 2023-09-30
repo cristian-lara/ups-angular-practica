@@ -16,7 +16,6 @@ module.exports = {
     getInstance: function() {
         if (!instance) {
             instance = app;
-            // Database and routes can be initialized here if they should be part of the singleton
             require('./src/database');
             app.use('/api/empleados', require('./src/routes/empleados.route'));
         }

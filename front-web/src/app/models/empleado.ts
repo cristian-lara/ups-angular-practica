@@ -3,4 +3,5 @@ export interface IEmpleado {
   cargo: string;
   departamento: string;
   sueldo: number;
+  _id?: string;
 }

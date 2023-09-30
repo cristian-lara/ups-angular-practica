@@ -1,8 +1,10 @@
 <div class="row mt-2">
   <div class="col-md-4">
-<app-formulario-empleado (empleadoSeleccionado)="handleEmpleado($event)"></app-formulario-empleado>
+<app-formulario-empleado [empleado]="empleadoSeleccionado" (empleadoSeleccionado)="handleEmpleado($event)"></app-formulario-empleado>
   </div>
   <div class="col-md-8">
-<app-lista-empleado [empleados]="empleados"></app-lista-empleado>
+<app-lista-empleado [empleados]="empleados" (empleadoSeleccionado)="handleEmpleadoSeleccionadoLista($event)"
+                    (empleadoSeleccionadoEliminar)="eliminar($event)"
+></app-lista-empleado>
   </div>
 </div>

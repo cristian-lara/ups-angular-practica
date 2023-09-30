@@ -1,4 +1,5 @@
 const validarEmpleado = (req, res, next) => {
+    console.log('validar', req.body)
     const { nombre, cargo, departamento, sueldo } = req.body;
 
     // Validar que se proporcionen todos los campos requeridos
